@@ -1,0 +1,19 @@
+.header {
+  background-image: linear-gradient(120deg, #54a0ff 0%, #66a6ff 100%);
+  color: #fff;
+  padding: 1rem;
+
+  &-title {
+    margin: 0;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+  }
+
+  &-text {
+    margin: 0;
+    font-family: 'nunito';
+    // font-size: 2.5rem;
+    font-weight: lighter;
+    // text-align: center;
+  }
+}
