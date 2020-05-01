@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import {Card} from 'react-bootstrap'
 
-const BlogIndex = ({ data, location }) => {
+const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   return (
@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
                         marginBottom: rhythm(1 / 4),
                       }}
                     >
-                      <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                      <Link style={{ boxShadow: `none` }} to={`/blog/${node.fields.slug}`}>
                         {title}
                       </Link>
                     </h3>
@@ -47,7 +47,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default Index
 
 export const pageQuery = graphql`
   query {
