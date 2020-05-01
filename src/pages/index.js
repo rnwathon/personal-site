@@ -10,7 +10,6 @@ import {Card} from 'react-bootstrap'
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
@@ -34,13 +33,11 @@ const BlogIndex = ({ data, location }) => {
                 <Card.Subtitle className="mb-2 text-muted">
                   {node.frontmatter.date}
                 </Card.Subtitle>
-                <Card.Text>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                  />
-                </Card.Text>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
               </Card.Body>
             </Card>
           )
