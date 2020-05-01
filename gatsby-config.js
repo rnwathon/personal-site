@@ -1,17 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Rakhmat N. Wathon`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Rakhmat N. Wathon`,
+      summary: `who constantly seeking to improve as well as willing to go the extra mile in all that he is passionate about.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `A personal blog of Rakhmat Nashrul Wathon`,
+    siteUrl: `https://rnwathon.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `rnwathon`,
     },
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
