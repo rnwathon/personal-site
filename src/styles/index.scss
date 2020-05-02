@@ -40,6 +40,10 @@
   font-family: 'nunito';
 }
 
+body {
+  background-color: #fafafa;
+}
+
 a, a:hover {
   text-decoration: none !important;
   box-shadow: none;
@@ -53,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@import "./custom/header.scss";
-@import "./custom/homepage.scss";
+@import "./custom/header";
+@import "./custom/footer";
+@import "./custom/homepage";
 
