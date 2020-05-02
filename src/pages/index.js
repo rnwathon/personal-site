@@ -11,7 +11,7 @@ const Index = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO/>
       <div className="homepage-bloglist">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
