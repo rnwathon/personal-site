@@ -17,7 +17,7 @@ const Index = ({ data, location }) => {
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
-            <Card key={node.fields.slug} className="mb-2">
+            <Card key={node.fields.slug} className="mb-3 shadow-sm">
               <Card.Body>
                 <Card.Title>
                     <h3
@@ -31,7 +31,7 @@ const Index = ({ data, location }) => {
                     </h3>
                 </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  {node.frontmatter.date}
+                  📅 {node.frontmatter.date}
                 </Card.Subtitle>
                 <p
                   dangerouslySetInnerHTML={{
