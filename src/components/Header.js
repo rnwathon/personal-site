@@ -37,7 +37,6 @@ const Header = ({location, title}) => {
           <Navbar bg="transparent">
             <Image
               fixed={data.avatar.childImageSharp.fixed}
-              // alt={data.site.siteMetadata.author.name}
               style={{
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
@@ -61,8 +60,8 @@ const Header = ({location, title}) => {
               </h1>
               <Navbar.Collapse className="justify-content-end">
                 <Nav>
-                  <Nav.Link href="#" className="text-white">Blog</Nav.Link>
-                  <Nav.Link href="#" className="text-white">About</Nav.Link>
+                  <Link to="/blog" className="text-white mx-3">Blog</Link>
+                  <Link to="/about" className="text-white mx-3">About</Link>
                 </Nav>
               </Navbar.Collapse>  
           </Navbar>
@@ -80,8 +79,20 @@ const Header = ({location, title}) => {
   } else {
     return (
       <div className="header">
-        <Navbar bg="transparent">
-          <Container>
+        <Container>
+          <Navbar bg="transparent">
+            <Image
+              fixed={data.avatar.childImageSharp.fixed}
+              style={{
+                marginRight: rhythm(1 / 2),
+                marginBottom: 0,
+                minWidth: 50,
+                borderRadius: `100%`,
+              }}
+              imgStyle={{
+                borderRadius: `50%`,
+              }}
+            />
             <h3 className="header-title">
               <Link
                 style={{
@@ -95,12 +106,12 @@ const Header = ({location, title}) => {
             </h3>
             <Navbar.Collapse className="justify-content-end">
               <Nav>
-                <Nav.Link href="#" className="text-white">Blog</Nav.Link>
-                <Nav.Link href="#" className="text-white">About</Nav.Link>
+                <Link to="/blog" className="text-white mx-3">Blog</Link>
+                <Link to="/about" className="text-white mx-3">About</Link>
               </Nav>
             </Navbar.Collapse>  
-          </Container>
-        </Navbar>
+          </Navbar>
+        </Container>
       </div>
     )
   }
