@@ -6,19 +6,21 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
+import {Button} from "react-bootstrap"
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-
+  console.log(post)
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
-        <header>
+      <article className="blog-post">
+        <header className="blog-post-header">
           <h1
             style={{
               marginTop: rhythm(1),
@@ -28,16 +30,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.title}
           </h1>
           <p
+            className="text-muted"
             style={{
-              ...scale(-1 / 5),
               display: `block`,
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            📅 {post.frontmatter.date} - ⌛ {post.fields.readingTime.text}
           </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section dangerouslySetInnerHTML={{ __html: post.html }} className="blog-post-content"/>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -61,14 +63,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <li>
             {previous && (
               <Link to={`/blog/${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
+                ⬅️ {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={`/blog/${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
+                {next.frontmatter.title} ➡️
               </Link>
             )}
           </li>
@@ -95,6 +97,12 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+      }
+      fields {
+        slug
+        readingTime {
+          text
+        }
       }
     }
   }

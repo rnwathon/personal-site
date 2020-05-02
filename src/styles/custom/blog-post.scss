@@ -1,0 +1,13 @@
+.blog-post {
+  &-header {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  }
+  &-content {
+    ul, ol {
+      margin-left: 1.75rem;
+    }
+  }
+}
