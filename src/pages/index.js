@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import {Card} from "react-bootstrap"
+import { Button, Card } from "react-bootstrap"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -42,6 +42,9 @@ const Index = ({ data, location }) => {
             </Card>
           )
         })}
+        <div className="text-center">
+          <Link to="/blog" className="btn btn-primary">View All Article</Link>
+        </div>
       </div>
     </Layout>
   )
@@ -56,7 +59,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { featuredpost: { eq: true }}}
+      sort: { fields: [frontmatter___date], order: DESC }
+      ) {
       edges {
         node {
           excerpt
