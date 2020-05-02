@@ -28,7 +28,7 @@ const Header = ({location, title}) => {
       }
     }
   `)
-  
+
   const rootPath = `${__PATH_PREFIX__}/`
   if (location.pathname === rootPath) {
     return (
@@ -70,6 +70,9 @@ const Header = ({location, title}) => {
             <h2 className="header-text">
               Your time is limited, so don't waste it living someone else's life. Don't be trapped by Dogma which is living with the result of other people's thinking ✨
             </h2>
+            <p>
+              - Steve Jobs
+            </p>
           </Jumbotron>
         </Container>
       </div>
