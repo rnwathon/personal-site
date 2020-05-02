@@ -1,11 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import {Card} from 'react-bootstrap'
+import {Card} from "react-bootstrap"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -20,20 +19,21 @@ const Index = ({ data, location }) => {
             <Card key={node.fields.slug} className="mb-3 shadow-sm">
               <Card.Body>
                 <Card.Title>
-                    <h3
-                      style={{
-                        marginBottom: rhythm(1 / 4),
-                      }}
-                    >
-                      <Link style={{ boxShadow: `none` }} to={`/blog/${node.fields.slug}`}>
-                        {title}
-                      </Link>
-                    </h3>
+                  <h3
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                  >
+                    <Link style={{ boxShadow: `none` }} to={`/blog/${node.fields.slug}`}>
+                      {title}
+                    </Link>
+                  </h3>
                 </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  📅 {node.frontmatter.date}
+                  📅 {node.frontmatter.date} - ⌛ {node.fields.readingTime.text}
                 </Card.Subtitle>
                 <p
+                  className="font-italic"
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
@@ -67,6 +67,12 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+          }
+          fields {
+            slug
+            readingTime {
+              text
+            }
           }
         }
       }
