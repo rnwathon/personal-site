@@ -151,6 +151,9 @@ dd {
 
 blockquote {
   margin: 0 0 1rem;
+  padding: 1rem;
+  background-color: lighten($primary, 30%);
+  border-color: $primary;
 }
 
 b,
