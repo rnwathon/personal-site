@@ -1,15 +1,53 @@
 import React, { Component } from 'react'
 import { Link } from "gatsby"
+import { rhythm } from "../utils/typography"
 import {Navbar, Nav, Container, Jumbotron} from "react-bootstrap"
-
+import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 const Header = ({location, title}) => {
+  const data = useStaticQuery(graphql`
+    query {
+      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+        childImageSharp {
+          fixed(width: 50, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      site {
+        siteMetadata {
+          author {
+            name
+            summary
+          }
+          social {
+            twitter
+          }
+        }
+      }
+    }
+  `)
+  
   const rootPath = `${__PATH_PREFIX__}/`
   if (location.pathname === rootPath) {
     return (
       <div className="header" style={{minHeight: "350px"}}>
         <Container>
           <Navbar bg="transparent">
+            <Image
+              fixed={data.avatar.childImageSharp.fixed}
+              // alt={data.site.siteMetadata.author.name}
+              style={{
+                marginRight: rhythm(1 / 2),
+                marginBottom: 0,
+                minWidth: 50,
+                borderRadius: `100%`,
+              }}
+              imgStyle={{
+                borderRadius: `50%`,
+              }}
+            />
               <h1 className="header-title">
                 <Link
                   style={{
