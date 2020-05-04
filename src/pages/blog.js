@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import { Card, Form } from "react-bootstrap"
 
-const Index = ({ data, location }) => {
+const Blog = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   let [posts, setPosts] = useState([...data.allMarkdownRemark.edges])
   return (
@@ -73,7 +73,7 @@ const Index = ({ data, location }) => {
   )
 }
 
-export default Index
+export default Blog
 
 export const pageQuery = graphql`
   query {
