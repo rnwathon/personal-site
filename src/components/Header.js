@@ -81,29 +81,32 @@ const Header = ({location, title}) => {
       <div className="header">
         <Container>
           <Navbar bg="transparent">
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
+            <Link
               style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
+                boxShadow: `none`,
+                color: `inherit`,
+                display: `flex`,
+                alignItems: `center`
               }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
-            <h3 className="header-title">
-              <Link
+              to={`/`}
+            >
+              <Image
+                fixed={data.avatar.childImageSharp.fixed}
                 style={{
-                  boxShadow: `none`,
-                  color: `inherit`,
+                  marginRight: rhythm(1 / 2),
+                  marginBottom: 0,
+                  minWidth: 50,
+                  borderRadius: `100%`,
                 }}
-                to={`/`}
-              >
+                imgStyle={{
+                  borderRadius: `50%`,
+                }}
+              />
+              <h3 className="header-title">
                 {title}
-              </Link>
-            </h3>
+              </h3>
+            </Link>
+
             <Navbar.Collapse className="justify-content-end">
               <Nav>
                 <Link to="/blog" className="text-white mx-3">Blog</Link>
