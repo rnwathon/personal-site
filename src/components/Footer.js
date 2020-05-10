@@ -8,9 +8,9 @@ const Footer = () => {
     <div className="footer">
       <Container className="text-center">
         <footer>
-          © {new Date().getFullYear()}, Built with
+          Rakhmat N. Wathon © {new Date().getFullYear()}, Built with
           {` `}
-          &#9749;
+          ❤️ and 🥤
         </footer>
       </Container>
     </div>
