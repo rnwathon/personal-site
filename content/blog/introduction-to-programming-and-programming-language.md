@@ -15,15 +15,11 @@ What actually Programmer make? it's a **Computer Program** which basically a pie
 
 Computer is just a dumb machine, it needs someone to tell it what to do, precisely what to do. But, it strength is it can do it million times faster than a human.
 
-
-
 > Computer is just a dumb machine, it needs someone to tell it what to do, precisely what to do
-
-
 
 So, how can we tell a computer what to do? 
 
-Think of it as you ask your friend a favor to buy you a snack at a store, how you tell him what to do? You use a **language** that he understand, you give him instructions, what snacks to look for, and so on.
+Think of it as you ask your friend a favor to buy you a snack at a store, how do you tell him what to do? You use a **language** that he understand, you give him instructions, what snacks to look for, and so on.
 
 The same case is implemented in telling computer what to do, we use language. Unfortunately, computer is only understand one "language" which is **Binary** that only contains 1 and 0.
 
@@ -62,7 +58,7 @@ This human-readable programming language is called **High-Level Programming Lang
 
 > But wait...
 
-I said that the computer **only**  understand one language which is Binary. So, how that it can understand this human-readable programming language?
+I said that the computer **only**  understand one language which is Binary. So, how can it understand this human-readable programming language?
 
 Hhmmm...
 
