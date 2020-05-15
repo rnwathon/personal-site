@@ -13,7 +13,7 @@ tags:
 
 What actually Programmer make? it's a **Computer Program** which basically a piece of text (or we call it code) that directing force that makes computer do what it does, it is data in the computer's memory, yet it controls the actions performed on the same memory.
 
-Computer is just a dumb machine, it needs someone to tell it what to do, precisely what to do. But, it strength is it can do it million times faster than a human.
+Computer is just a dumb machine, it needs someone to tell it what to do, precisely what to do. But, its strength is it can do it million times faster than a human.
 
 > Computer is just a dumb machine, it needs someone to tell it what to do, precisely what to do
 
@@ -21,7 +21,7 @@ So, how can we tell a computer what to do?
 
 Think of it as you ask your friend a favor to buy you a snack at a store, how do you tell him what to do? You use a **language** that he understand, you give him instructions, what snacks to look for, and so on.
 
-The same case is implemented in telling computer what to do, we use language. Unfortunately, computer is only understand one "language" which is **Binary** that only contains 1 and 0.
+The same goes to telling computer what to do, we use language. Unfortunately, computer is only understand one "language" which is **Binary** that only contains 1 and 0.
 
 In the beginning, at birth of computing, programs looked something like this:
 
@@ -62,7 +62,7 @@ I said that the computer **only**  understand one language which is Binary. So, 
 
 Hhmmm...
 
-If for instance you want to talk to Japanese person but he/she doesn't understand your language (e.g english) and you can't speak Japanese, what would you do?
+for instance, you want to talk to Japanese person but he/she doesn't understand your language (e.g english) and you can't speak Japanese, what would you do?
 
 You use **Translator.**
 
