@@ -66,4 +66,8 @@ for instance, you want to talk to Japanese person but he/she doesn't understand 
 
 You use **Translator.**
 
-There is also a translator of programming languague. We will talk about this translator in the future post.
+There is also a translator of programming languague. Its job is to translate the human-readable programming language into binary codes that the machine understrand. 
+
+We will talk about this translator in the future post.
+
+Thanks for reading.
