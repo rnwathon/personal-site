@@ -72,7 +72,7 @@ const Blog = ({ data, location }) => {
           <div className="text-center">
             <span className="display-1">😟</span>
             <h3>I'm affraid there's no article with that keyword</h3>
-            <a href={`https://www.google.com/search?q=site:rnwathon.netlify.app/blog+${filter}`}>Try using Google</a>
+            <a href={`https://www.google.com/search?q=site:rnwathon.com/blog+${filter}`}>Try using Google</a>
           </div>
         }
       </article>
