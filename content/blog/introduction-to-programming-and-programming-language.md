@@ -9,9 +9,11 @@ tags:
   - Fundamental
   - Basic
 ---
-**Programming** or **Computer Programming** is a **process** by someone called a Programmer in writing, testing, fixing, and maintaining codes in a **Computer Program** with certain **Programming Language.** So, it is clear that as a Programmer you're not just writing codes. You also test it, look out for some errors and then fix it, maintain it to keep it working in a long time. You have to be critical, logical, and rational.
+**Programming** or **Computer Programming** is a **process** by someone called a Programmer in writing, testing, fixing, and maintaining codes in a **Computer Program** with certain **Programming Language.** Basically, it just telling computer what to do.
 
-What actually Programmer make? it's a **Computer Program** which basically a piece of text (or we call it code) that directing force that makes computer do what it does, it is data in the computer's memory, yet it controls the actions performed on the same memory.
+Telling a computer to receive and show your email, makes you able to create and save your presentation in PowerPoint, upload and showcase your beautiful family photo on Instagram, etc.
+
+What actually Programmers make? it's a **Computer Program** which basically a piece of text (or we call it *code*) that directing force that makes computer do what it does, it is data in the computer's memory, yet it controls the actions performed on the same memory.
 
 Computer is just a dumb machine, it needs someone to tell it what to do, precisely what to do. But, its strength is it can do it million times faster than a human.
 
@@ -52,7 +54,7 @@ while (count <= 10) {
 console.log(total);
 ```
 
-The program above written in a programming language called **JavaScript** which does the same thing, add the numbers from 1 to 10 and print out the result. But it's more readable.
+The program above written in a programming language called **JavaScript** which does the same thing, add the numbers from 1 to 10 and print out the result. But it's more readable. Right? yeah sort of..
 
 This human-readable programming language is called **High-Level Programming Language**. The other type is **Low-Level Programming Language** which is machine-readable just like the binary codes.
 
@@ -66,7 +68,7 @@ for instance, you want to talk to Japanese person but he/she doesn't understand 
 
 You use **Translator.**
 
-There is also a translator of programming languague. Its job is to translate the human-readable programming language into binary codes that the machine understrand. 
+There is also a translator of programming language. Its job is to translate the human-readable programming language into binary codes that the machine understand. 
 
 We will talk about this translator in the future post.
 
