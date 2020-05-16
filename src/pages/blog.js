@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -9,6 +9,21 @@ import { Card, Form } from "react-bootstrap"
 const Blog = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   let [posts, setPosts] = useState([...data.allMarkdownRemark.edges])
+  let [filter, setFilter] = useState("")
+
+  useEffect(() => {
+    if(filter === ""){
+      setPosts(data.allMarkdownRemark.edges)
+      return;
+    }
+
+    let filteredPosts = data.allMarkdownRemark.edges
+      .filter(post => post.node.frontmatter.title.toLowerCase()
+      .includes(filter.toLowerCase()))
+
+    setPosts(filteredPosts)
+  }, [filter])
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All Post"/>
@@ -17,16 +32,8 @@ const Blog = ({ data, location }) => {
           <Form.Control 
             type="text" 
             placeholder="Search..."
-            onChange={e => {
-              if(e.target.value === ""){
-                setPosts(data.allMarkdownRemark.edges)
-                return;
-              }
-              let filteredPosts = posts
-                .filter(post => post.node.frontmatter.title.toLowerCase()
-                .includes(e.target.value.toLowerCase()))
-              setPosts(filteredPosts)
-            }}
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
           />
         </Form.Group>
       </Form>
@@ -65,7 +72,7 @@ const Blog = ({ data, location }) => {
           <div className="text-center">
             <span className="display-1">😟</span>
             <h3>I'm affraid there's no article with that keyword</h3>
-            <a href="https://www.google.com/search?q=site:rnwathon.netlify.app/blog+testing">Try using Google</a>
+            <a href={`https://www.google.com/search?q=site:rnwathon.netlify.app/blog+${filter}`}>Try using Google</a>
           </div>
         }
       </article>
