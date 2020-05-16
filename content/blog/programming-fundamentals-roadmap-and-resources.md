@@ -22,8 +22,7 @@ I made this simple roadmap of what things to learn first to get a good grasp of 
 
 I will post some resources regarding the roadmap above in this blog. So, stay tuned.
 
-
-
 ## Resources:
 
-`Coming soon`
+* [Introduction to Programming & Programming Language](https://rnwathon.com/blog/introduction-to-programming-and-programming-language/)
+* [Compiler vs Interpreter](https://rnwathon.com/blog/compiler-vs-interpreter/)
