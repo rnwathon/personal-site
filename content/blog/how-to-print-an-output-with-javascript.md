@@ -20,6 +20,8 @@ console.log("Hello World")
 // Hello World
 ```
 
+
+
 This `console.log` function is also often use as most basic debugging tools when you need to learn the flow of your program. You can use this function everywhere as you needed.
 
 The other way is with `Alert` function, this function will show a pop-up alert on the browser with the content of its argument (just like the `console.log`). But, this function is rarely used nowadays. Most web application will just use their custom alert with certain styling instead of this default alert.
