@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
  @import "functions";
  @import "variables";
  @import "mixins";
@@ -37,11 +38,11 @@
  @import "print"; 
 
 * {
-  font-family: 'nunito';
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #fefefe;
   font-size: 18px;
   line-height: 35px;
 }
