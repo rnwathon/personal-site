@@ -1,3 +1,18 @@
 .footer {
+  color: white;
   padding: 2.5rem;
+  background: $primary;
+  margin-top: 2rem;
+
+  &-brand {
+    margin-bottom: 2rem;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    a {
+      color: white;
+    }
+  }
 }
