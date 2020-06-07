@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Rakhmat N. Wathon`,
+    title: `rnwathon`,
     author: {
       name: `Rakhmat N. Wathon`,
       summary: `who constantly seeking to improve as well as willing to go the extra mile in all that he is passionate about.`,
@@ -78,6 +78,14 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ // See below to configure properly
+        }
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
