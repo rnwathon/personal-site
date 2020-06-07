@@ -43,7 +43,7 @@ const Index = ({ data, location }) => {
           )
         })}
         <div className="text-center">
-          <Link to="/blog" className="btn btn-primary">View All Article</Link>
+          <Link to="/blog" className="btn btn-primary">View All Articles</Link>
         </div>
       </div>
     </Layout>
