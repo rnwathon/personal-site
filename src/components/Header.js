@@ -14,7 +14,7 @@ const Header = ({location, title}) => {
       avatar: file(absolutePath: { regex: "/potrait.png/" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
@@ -56,6 +56,7 @@ const Header = ({location, title}) => {
             </div>
             <div className="display-image">
               <Image
+                loading="eager"
                 fluid={data.avatar.childImageSharp.fluid}
                 style={{
                   width: "100%",
