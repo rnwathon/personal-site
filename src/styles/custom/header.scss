@@ -1,23 +1,114 @@
 .header {
-  background-image: linear-gradient(120deg, #54a0ff 0%, #a1c4fd 100%);
-  color: #fff;
-  padding: 1rem;
+  font-family: 'Nunito Sans', sans-serif;
 
-  &-title {
-    margin: 0;
-    // letter-spacing: 0.1rem;
-    font-size: 1.5rem;
+  .memphis0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 350px;
+    height: auto;
+  }
 
-    @include media-breakpoint-down(sm) {
+  .memphis1 {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: -10;
+    height: auto;
+
+    @include media-breakpoint-down("sm"){
       display: none;
+    }
+
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+
+    &-brand {
+      margin: 0;
+      a {
+        box-shadow: none;
+        color: inherit;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 2rem;
+        font-weight: bolder;
+  
+        &:hover {
+          color: $primary
+        }
+      }
+    }
+
+    &-nav {
+      a {
+        box-shadow: none;
+        color: inherit;
+        font-family: 'Nunito Sans', sans-serif;
+        margin-left: 1rem;
+  
+        &:hover {
+          color: $primary
+        }
+      }
     }
   }
 
-  &-text {
+  .display {
+    position: relative;
     margin: 0;
-    font-family: 'nunito';
-    // font-size: 2.5rem;
-    font-weight: lighter;
-    // text-align: center;
+    border-bottom: 1px solid #EAEAEA;
+    border-radius: 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down("md"){
+      margin-top: 150px;
+      flex-direction: column;
+    }
+
+    &-text {
+      @include media-breakpoint-down("md"){
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        margin: 0;
+        color: $primary;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 4rem;
+        font-weight: 900;
+
+        @include media-breakpoint-down("md"){
+          font-size: 3rem;
+        }
+      }
+      
+      h3 {
+        margin: 0;
+        color: rgba($primary, 0.6);
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 2rem;
+
+        @include media-breakpoint-down("md"){
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 350px;
+      height: auto;
+
+      @include media-breakpoint-down("md"){
+        position: static
+      }
+    }
   }
 }
