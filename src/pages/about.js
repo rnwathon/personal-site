@@ -32,12 +32,6 @@ const About = ({ data, location }) => {
         <p>
           Currently, I’m writing codes as a Front-End Developer at <a href="https://www.mhcasia.com/" target="_blank">MHC Asia</a> using HTML, CSS, JavaScript, React, and other Front-End ecosystems. By choosing JavaScript as my main programming language, it allows me to also explore on the Back-End side of the development.
         </p>
-        <div className="text-center">
-          <h2 className="mb-4">Reach me out!</h2>
-          <a href="https://twitter.com/rnwathon" target="_blank" className="mx-5"><FaTwitter size={64}/> </a>
-          <a href="https://instagram.com/rnwathon" target="_blank" className="mx-5"><FaInstagram size={64}/> </a>
-          <a href="https://github.com/rnwathon" target="_blank" className="mx-5"><FaGithubAlt size={64}/></a>
-        </div>
       </div>
     </Layout>
   )
