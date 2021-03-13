@@ -39,6 +39,7 @@
 
 * {
   font-family: 'Roboto', sans-serif;
+  box-sizing: content-box;
 }
 
 body {
@@ -65,4 +66,5 @@ h1, h2, h3, h4, h5, h6 {
 @import "./custom/footer";
 @import "./custom/homepage";
 @import "./custom/blog-post";
+@import "./custom/github-calendar";
 

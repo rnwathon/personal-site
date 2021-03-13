@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import GithubCalendar from "../components/GithubCalendar"
 import { rhythm } from "../utils/typography"
 import { Button, Card } from "react-bootstrap"
 
@@ -12,39 +13,42 @@ const Index = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO/>
-      <div className="homepage-bloglist">
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <Card key={node.fields.slug} className="mb-3 shadow-sm bg-glass">
-              <Card.Body>
-                <Card.Title>
-                  <h3
-                    style={{
-                      marginBottom: rhythm(1 / 4),
+      <div className="content">
+        <div className="content-bloglist">
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <Card key={node.fields.slug} className="mb-3 shadow-sm bg-glass">
+                <Card.Body>
+                  <Card.Title>
+                    <h3
+                      style={{
+                        marginBottom: rhythm(1 / 4),
+                      }}
+                    >
+                      <Link style={{ boxShadow: `none` }} to={`/blog/${node.fields.slug}`}>
+                        {title}
+                      </Link>
+                    </h3>
+                  </Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    📅 {node.frontmatter.date} - ⌛ {node.fields.readingTime.text}
+                  </Card.Subtitle>
+                  <p
+                    className="font-italic"
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
                     }}
-                  >
-                    <Link style={{ boxShadow: `none` }} to={`/blog/${node.fields.slug}`}>
-                      {title}
-                    </Link>
-                  </h3>
-                </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                  📅 {node.frontmatter.date} - ⌛ {node.fields.readingTime.text}
-                </Card.Subtitle>
-                <p
-                  className="font-italic"
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </Card.Body>
-            </Card>
-          )
-        })}
-        <div className="text-center">
-          <Link to="/blog" className="btn btn-primary">View All Articles</Link>
+                  />
+                </Card.Body>
+              </Card>
+            )
+          })}
+          <div className="text-center">
+            <Link to="/blog" className="btn btn-primary">View All Articles</Link>
+          </div>
         </div>
+        <GithubCalendar />
       </div>
     </Layout>
   )

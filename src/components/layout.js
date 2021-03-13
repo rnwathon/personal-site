@@ -10,7 +10,7 @@ const Layout = ({ location, title, children }) => {
   return (
     <>
       <Header location={location} title={title}/>
-      <div className="homepage-container">
+      <div className="content-container">
         <Container>
           <main>{children}</main>
         </Container>
