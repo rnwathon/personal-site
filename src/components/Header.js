@@ -10,13 +10,6 @@ import { FaTwitter, FaInstagram, FaGithubAlt } from "react-icons/fa"
 const Header = ({location, title}) => {
   const data = useStaticQuery(graphql`
     query {
-      avatar: file(absolutePath: { regex: "/potrait.png/" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_noBase64
-          }
-        }
-      }
       site {
         siteMetadata {
           author {

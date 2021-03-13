@@ -5,7 +5,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import GithubCalendar from "../components/GithubCalendar"
 import { rhythm } from "../utils/typography"
-import { Button, Card } from "react-bootstrap"
+import { Button, Card, Row, Col } from "react-bootstrap"
+
+import projectsImg from "../images/Asset1.png"
+import videosImg from "../images/Asset2.png"
+import podcastImg from "../images/Asset3.png"
 
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -45,10 +49,44 @@ const Index = ({ data, location }) => {
             )
           })}
           <div className="text-center">
-            <Link to="/blog" className="btn btn-primary">View All Articles</Link>
+            <Link to="/blog" className="btn btn-primary px-5">View All Articles</Link>
           </div>
         </div>
-        <GithubCalendar />
+        <Card className="bg-glass shadow-sm">
+          <Card.Body>
+            <Row className="m-0">
+              <Col md={4} sm={12}>
+                <Card bg="secondary" className="content-card shadow-lg">
+                  <Card.Header>Projects</Card.Header>
+                  <Card.Body>
+                    <img src={projectsImg} />
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col md={4} sm={12}>
+                <Card bg="danger" className="content-card shadow-lg">
+                  <Card.Header>Videos</Card.Header>
+                  <Card.Body>
+                    <img src={videosImg} />
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col md={4} sm={12}>
+                <Card bg="success" className="content-card shadow-lg">
+                  <Card.Header>Podcast</Card.Header>
+                  <Card.Body>
+                    <img src={podcastImg} />
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="d-flex justify-content-center">
+                <GithubCalendar />
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
       </div>
     </Layout>
   )

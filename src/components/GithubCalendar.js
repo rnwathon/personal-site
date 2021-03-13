@@ -34,13 +34,9 @@ const GithubCalendar = () => {
   ];
 
   return(
-    <Card className="bg-glass shadow-sm d-flex align-items-center">
-      <Card.Body>
-        <div className="github-calendar">
-          <Calendar values={calendarData} until={lastDate} panelColors={panelColors}/>
-        </div>
-      </Card.Body>
-    </Card>
+    <div className="github-calendar shadow-lg">
+      <Calendar values={calendarData} until={lastDate} panelColors={panelColors}/>
+    </div>
   )
 }
 
