@@ -42,7 +42,7 @@ const Blog = ({ data, location }) => {
           posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <Card key={node.fields.slug} className="mb-3 shadow-sm">
+              <Card key={node.fields.slug} className="mb-3 shadow-sm bg-glass">
                 <Card.Body>
                   <Card.Title>
                     <h3
