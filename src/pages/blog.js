@@ -27,7 +27,7 @@ const Blog = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All Post"/>
-      <Form className="mt-5 mb-5 w-50 mx-auto">
+      <Form className="pt-5 mb-5 w-50 mx-auto">
         <Form.Group>
           <Form.Control 
             type="text" 

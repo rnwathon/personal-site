@@ -23,7 +23,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <header className="blog-post-header">
           <h1
             style={{
-              marginTop: rhythm(1),
+              paddingTop: rhythm(1),
               marginBottom: 0,
             }}
           >
@@ -58,6 +58,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             justifyContent: `space-between`,
             listStyle: `none`,
             padding: 0,
+            margin: 0
           }}
         >
           <li>
