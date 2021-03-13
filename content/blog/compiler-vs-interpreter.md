@@ -3,7 +3,7 @@ title: Compiler vs Interpreter
 date: 2020-05-16T13:01:11.386Z
 description: We already know that a computer only understand binary, so how can
   we translate human-readable programming language into binary?
-featuredpost: false
+featuredpost: true
 tags:
   - compiler
   - interpreted
