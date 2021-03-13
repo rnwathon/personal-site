@@ -19,10 +19,6 @@
         font-size: 2rem;
         font-weight: bolder;
         transition: color 0.5s;
-  
-        &:hover {
-
-        }
       }
     }
 
@@ -57,6 +53,7 @@
     }
 
     &-text {
+      margin-top: -65px;
       -webkit-animation: fadeInRight 1s; /* Safari 4+ */
       -moz-animation:    fadeInRight 1s; /* Fx 5+ */
       -o-animation:      fadeInRight 1s;
