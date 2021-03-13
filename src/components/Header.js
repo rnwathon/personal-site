@@ -51,6 +51,9 @@ const Header = ({location, title}) => {
               <h2> I'm Rakhmat </h2>
               <h3> Front-End Developer </h3>
             </div>
+            <div className="display-image bg-glass">
+
+            </div>
           </section>
           <section className="social-media">
             <a href="https://twitter.com/rnwathon" target="_blank" className="my-2"><FaTwitter size={24}/> </a>

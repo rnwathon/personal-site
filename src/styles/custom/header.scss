@@ -46,10 +46,12 @@
     min-height: 450px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     @include media-breakpoint-down("md"){
-      margin-top: 150px;
+      // margin-top: 150px;
       flex-direction: column;
+      justify-content: space-evenly;
     }
 
     &-text {
@@ -90,11 +92,14 @@
     }
 
     &-image {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 350px;
-      height: auto;
+      // position: absolute;
+      // bottom: 0;
+      // right: 0;
+      margin-top: -65px;
+      margin-right: 100px;
+      border-radius: 100%;
+      width: 250px;
+      height: 250px;
       -webkit-animation: fadeInUp 1s; /* Safari 4+ */
       -moz-animation:    fadeInUp 1s; /* Fx 5+ */
       -o-animation:      fadeInUp 1s;
@@ -102,7 +107,8 @@
       animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
 
       @include media-breakpoint-down("md"){
-        position: static
+        position: static;
+        margin-right: 0;
       }
     }
   }
