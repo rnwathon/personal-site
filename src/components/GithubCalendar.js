@@ -4,6 +4,7 @@ import Calendar from 'react-github-contribution-calendar';
 
 const GithubCalendar = () => {
   let [calendarData, setCalendarData] = useState({})
+  let [lastDate, setLastDate] = useState()
 
   useEffect(() => {
     fetch("https://ancient-butterfly.herokuapp.com/v3/rnwathon?y=lastYear")
@@ -19,6 +20,7 @@ const GithubCalendar = () => {
         }
 
         setCalendarData(data)
+        setLastDate(contributions[contributions.length-1].date)
       }
     })
   }, [])
@@ -35,7 +37,7 @@ const GithubCalendar = () => {
     <Card className="bg-glass shadow-sm d-flex align-items-center">
       <Card.Body>
         <div className="github-calendar">
-          <Calendar values={calendarData} until={"2021-03-14"} panelColors={panelColors}/>
+          <Calendar values={calendarData} until={lastDate} panelColors={panelColors}/>
         </div>
       </Card.Body>
     </Card>
