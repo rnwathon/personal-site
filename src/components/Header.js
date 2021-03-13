@@ -4,8 +4,7 @@ import { rhythm } from "../utils/typography"
 import {Navbar, Nav, Container, Jumbotron} from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import Memphis0 from '../../content/assets/memphis0.svg'
-import Memphis1 from '../../content/assets/memphis1.svg'
+import { FaTwitter, FaInstagram, FaGithubAlt } from "react-icons/fa"
 // import Potrait from '../../content/assets/potrait.png'
 
 const Header = ({location, title}) => {
@@ -36,8 +35,6 @@ const Header = ({location, title}) => {
   if (location.pathname === rootPath) {
     return (
       <div className="header">
-        <Memphis0 className="memphis0"/>
-        <Memphis1 className="memphis1"/>
         <Container>
           <Navbar bg="transparent">
               <Navbar.Brand>
@@ -54,16 +51,11 @@ const Header = ({location, title}) => {
               <h2> I'm Rakhmat </h2>
               <h3> Front-End Developer </h3>
             </div>
-            <div className="display-image">
-              <Image
-                loading="eager"
-                fluid={data.avatar.childImageSharp.fluid}
-                style={{
-                  width: "100%",
-                  height: "100%"
-                }}
-              />
-            </div>
+          </section>
+          <section className="social-media">
+            <a href="https://twitter.com/rnwathon" target="_blank" className="my-2"><FaTwitter size={24}/> </a>
+            <a href="https://instagram.com/rnwathon" target="_blank" className="my-2"><FaInstagram size={24}/> </a>
+            <a href="https://github.com/rnwathon" target="_blank" className="my-2"><FaGithubAlt size={24}/></a>
           </section>
         </Container>
       </div>
@@ -71,8 +63,6 @@ const Header = ({location, title}) => {
   } else {
     return (
       <div className="header">
-        <Memphis0 className="memphis0"/>
-        <Memphis1 className="memphis1"/>
         <Container>
           <Navbar bg="transparent">
               <Navbar.Brand>

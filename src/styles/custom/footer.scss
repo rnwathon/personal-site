@@ -2,28 +2,4 @@
   color: white;
   padding: 2.5rem;
   background: $primary;
-  margin-top: 2rem;
-
-  &-brand {
-    margin-bottom: 2rem;
-
-    h2 {
-      margin-bottom: 2rem;
-    }
-
-    a {
-      color: white;
-
-      svg {
-
-        &:hover {
-          -webkit-animation: bounce 0.4s infinite; /* Safari 4+ */
-          -moz-animation:    bounce 0.4s infinite; /* Fx 5+ */
-          -o-animation:      bounce 0.4s infinite;
-          animation:         bounce 0.4s infinite;
-          animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-        }
-      }
-    }
-  }
 }

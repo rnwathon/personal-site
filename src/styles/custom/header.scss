@@ -1,55 +1,27 @@
 .header {
+  position: relative;
   font-family: 'Nunito Sans', sans-serif;
-
-  .memphis0 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
-    width: 350px;
-    height: auto;
-
-    -webkit-animation: slideLeft 2s; /* Safari 4+ */
-    -moz-animation:    slideLeft 2s; /* Fx 5+ */
-    -o-animation:      slideLeft 2s;
-    animation:         slideLeft 2s;
-    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-  }
-
-  .memphis1 {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    z-index: -10;
-    height: auto;
-
-    -webkit-animation: slideDownBig 3s; /* Safari 4+ */
-    -moz-animation:    slideDownBig 3s; /* Fx 5+ */
-    -o-animation:      slideDownBig 3s;
-    animation:         slideDownBig 3s;
-    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-
-    @include media-breakpoint-down("sm"){
-      display: none;
-    }
-
-  }
+  // background: $primary;
+  // background-image: linear-gradient(to right top, #1651fb, #1651fb, #1651fb, #1651fb, #1651fb, #3255fb, #435afc, #515efc, #6968fd, #7c72fd, #8d7dfe, #9c88ff);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1792' height='600' preserveAspectRatio='none' viewBox='0 0 1792 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1748%26quot%3b)' fill='none'%3e%3crect width='1792' height='600' x='0' y='0' fill='url(%23SvgjsLinearGradient1749)'%3e%3c/rect%3e%3cpath d='M1792 0L1569.45 0L1792 117.02z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1569.45 0L1792 117.02L1792 289.92L731.37 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M731.3699999999999 0L1792 289.92L1792 359.04L386.5899999999999 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M386.5899999999999 0L1792 359.04L1792 453.25L254.66999999999993 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 600L193.41 600L0 481.67z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 481.67L193.41 600L639.1 600L0 243.57000000000002z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 243.57L639.1 600L1086.7 600L0 114.28999999999999z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 114.28999999999996L1086.7 600L1406.64 600L0 94.97999999999996z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1748'%3e%3crect width='1792' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='83.37%25' y1='149.67%25' x2='16.63%25' y2='-49.67%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1749'%3e%3cstop stop-color='rgba(27%2c 62%2c 161%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(2%2c 40%2c 150%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 
   .navbar {
+    color: white;
     padding: 0.5rem 0;
 
     &-brand {
+      color: white;
       margin: 0;
       a {
         box-shadow: none;
-        color: inherit;
+        color: white;
         font-family: 'Nunito Sans', sans-serif;
         font-size: 2rem;
         font-weight: bolder;
         transition: color 0.5s;
   
         &:hover {
-          color: $primary
+
         }
       }
     }
@@ -63,7 +35,8 @@
         transition: color 0.5s;
   
         &:hover {
-          color: $primary
+          color: inherit;
+          text-decoration: underline;
         }
       }
     }
@@ -74,7 +47,7 @@
     margin: 0;
     border-bottom: 1px solid #EAEAEA;
     border-radius: 0;
-    min-height: 500px;
+    min-height: 450px;
     display: flex;
     align-items: center;
 
@@ -97,7 +70,7 @@
 
       h2 {
         margin: 0;
-        color: $primary;
+        color: white;
         font-family: 'Nunito Sans', sans-serif;
         font-size: 4rem;
         font-weight: 900;
@@ -109,7 +82,7 @@
       
       h3 {
         margin: 0;
-        color: rgba($primary, 0.6);
+        color: rgba(white, 0.75);
         font-family: 'Nunito Sans', sans-serif;
         font-size: 2rem;
 
@@ -133,6 +106,26 @@
 
       @include media-breakpoint-down("md"){
         position: static
+      }
+    }
+  }
+
+  .social-media {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translate(0, -50%);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: rgba(white, 0.3);
+
+      &:hover {
+        color: white;
+        transition: 0.5s;
+
       }
     }
   }
