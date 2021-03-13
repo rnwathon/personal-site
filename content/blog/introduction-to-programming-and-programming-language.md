@@ -2,7 +2,7 @@
 title: Introduction to Programming and Programming Language
 date: 2020-05-15T06:23:59.921Z
 description: What programming really is and why we need programming language
-featuredpost: false
+featuredpost: true
 tags:
   - Programming
   - Programming Language
