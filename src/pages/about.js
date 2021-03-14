@@ -16,10 +16,10 @@ const About = ({ data, location }) => {
           a Front-End Developer from Indonesia 🇮🇩 who constantly seeking to improve as well as willing to go the extra mile in all that I'm passionate about. In short, <mark> I'm just a curious person. </mark> 
         </p>
         <p>
-          My first coding experience started all the way back when I was in high school when Blogger is so popular back then. I spent more time tweaking the HTML & CSS than actually creating the blog post itself 😆. Unfortunately, it didn't last long. I started to explore other things besides coding including art, design, video editing, visual fx etc. but I know, coding is one of the things that I would enjoy doing.
+          My first coding experience started all the way back when I was in high school when Blogger is so popular back then. I spent more time tweaking the HTML & CSS than actually creating the blog post itself. Unfortunately, it didn't last long. I started to explore other things besides coding including art, design, video editing, visual fx etc. but I know, coding is one of the things that I would enjoy doing.
         </p>
         <p>
-          I entered college in Computer Science major in Software Engineering, after getting my Bachelor’s Degree I attended a coding Bootcamp to further enhance my knowledge. That’s when I realized that I know little to nothing about the real world of Software Engineering Industry 🤦‍♂️
+          I entered college in Computer Science major in Software Engineering, after getting my Bachelor’s Degree I attended a coding Bootcamp to further enhance my knowledge. That’s when I realized that I know little to nothing about the real world of Software Engineering Industry.
         </p>
         <blockquote>
           <p>

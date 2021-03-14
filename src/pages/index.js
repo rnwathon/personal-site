@@ -52,37 +52,45 @@ const Index = ({ data, location }) => {
             <Link to="/blog" className="btn btn-primary px-5">View All Articles</Link>
           </div>
         </div>
-        <Card className="bg-glass shadow-sm">
+        <Card className="bg-glass shadow-sm mb-2">
           <Card.Body>
             <Row className="m-0">
               <Col md={4} sm={12}>
-                <Card bg="secondary" className="content-card shadow-secondary-lg">
-                  <Card.Header>Projects</Card.Header>
-                  <Card.Body>
-                    <img src={projectsImg} />
-                  </Card.Body>
-                </Card>
+                <Link to="/projects">
+                  <Card bg="secondary" className="content-card shadow-secondary-lg">
+                    <Card.Header>Projects</Card.Header>
+                    <Card.Body>
+                      <img src={projectsImg} />
+                    </Card.Body>
+                  </Card>
+                </Link>
               </Col>
               <Col md={4} sm={12}>
-                <Card bg="danger" className="content-card shadow-danger-lg">
-                  <Card.Header>Videos</Card.Header>
-                  <Card.Body>
-                    <img src={videosImg} />
-                  </Card.Body>
-                </Card>
+                <Link to="/videos">
+                  <Card bg="danger" className="content-card shadow-danger-lg">
+                    <Card.Header>Videos</Card.Header>
+                    <Card.Body>
+                      <img src={videosImg} />
+                    </Card.Body>
+                  </Card>
+                </Link>
               </Col>
               <Col md={4} sm={12}>
-                <Card bg="success" className="content-card shadow-success-lg">
-                  <Card.Header>Podcast</Card.Header>
-                  <Card.Body>
-                    <img src={podcastImg} />
-                  </Card.Body>
-                </Card>
+                <Link to="/podcast">
+                  <Card bg="success" className="content-card shadow-success-lg">
+                    <Card.Header>Podcast</Card.Header>
+                    <Card.Body>
+                      <img src={podcastImg} />
+                    </Card.Body>
+                  </Card>
+                </Link>
               </Col>
             </Row>
             <Row>
               <Col className="d-flex justify-content-center">
-                <GithubCalendar />
+                <a href="https://github.com/rnwathon" target="_blank">
+                  <GithubCalendar />
+                </a>
               </Col>
             </Row>
           </Card.Body>
