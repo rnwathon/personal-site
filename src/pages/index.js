@@ -56,7 +56,7 @@ const Index = ({ data, location }) => {
           <Card.Body>
             <Row className="m-0">
               <Col md={4} sm={12}>
-                <Card bg="secondary" className="content-card shadow-lg">
+                <Card bg="secondary" className="content-card shadow-secondary-lg">
                   <Card.Header>Projects</Card.Header>
                   <Card.Body>
                     <img src={projectsImg} />
@@ -64,7 +64,7 @@ const Index = ({ data, location }) => {
                 </Card>
               </Col>
               <Col md={4} sm={12}>
-                <Card bg="danger" className="content-card shadow-lg">
+                <Card bg="danger" className="content-card shadow-danger-lg">
                   <Card.Header>Videos</Card.Header>
                   <Card.Body>
                     <img src={videosImg} />
@@ -72,7 +72,7 @@ const Index = ({ data, location }) => {
                 </Card>
               </Col>
               <Col md={4} sm={12}>
-                <Card bg="success" className="content-card shadow-lg">
+                <Card bg="success" className="content-card shadow-success-lg">
                   <Card.Header>Podcast</Card.Header>
                   <Card.Body>
                     <img src={podcastImg} />

@@ -34,7 +34,7 @@ const GithubCalendar = () => {
   ];
 
   return(
-    <div className="github-calendar shadow-lg">
+    <div className="github-calendar shadow-sm">
       <Calendar values={calendarData} until={lastDate} panelColors={panelColors}/>
     </div>
   )
