@@ -34,8 +34,11 @@ const Header = ({location, title}) => {
                 <Link to={`/`}> {title} </Link>
               </Navbar.Brand>
               <Nav className="ml-auto">
-                <Link to="/blog">Blog</Link>
-                <Link to="#">Resume</Link>
+                <Link to="#" activeClassName="navbar-nav-active">Projects</Link>
+                <Link to="/blog" activeClassName="navbar-nav-active">Blog</Link>
+                <Link to="#" activeClassName="navbar-nav-active">Videos</Link>
+                <Link to="#" activeClassName="navbar-nav-active">Podcast</Link>
+                <Link to="#" activeClassName="navbar-nav-active">About</Link>
               </Nav>
           </Navbar>
           <section className="display">
@@ -65,8 +68,11 @@ const Header = ({location, title}) => {
                 <Link to={`/`}> {title} </Link>
               </Navbar.Brand>
               <Nav className="ml-auto">
-                <Link to="/blog">Blog</Link>
-                <Link to="#">Resume</Link>
+                <Link to="#" activeClassName="navbar-nav-active">Projects</Link>
+                <Link to="/blog" activeClassName="navbar-nav-active">Blog</Link>
+                <Link to="#" activeClassName="navbar-nav-active">Videos</Link>
+                <Link to="#" activeClassName="navbar-nav-active">Podcast</Link>
+                <Link to="#" activeClassName="navbar-nav-active">About</Link>
               </Nav>
           </Navbar>
         </Container>

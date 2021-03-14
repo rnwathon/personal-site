@@ -28,12 +28,19 @@
         color: inherit;
         font-family: 'Nunito Sans', sans-serif;
         margin-left: 1rem;
-        transition: color 0.5s;
+        padding: 0 1rem;
+        border-radius: 10px;
+        transition: all .5s;
   
         &:hover {
+          background: rgba($black, .25);
           color: inherit;
           text-decoration: underline;
         }
+      }
+
+      &-active {
+        background: rgba($black, .25);
       }
     }
   }
