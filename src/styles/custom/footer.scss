@@ -1,5 +1,10 @@
 .footer {
+  min-height: 100px;
+  position: relative;
   color: white;
   padding: 2.5rem;
-  background: $primary;
+  background-image: 
+    radial-gradient(at 0% 0%, $cyan -90%, transparent),
+    radial-gradient(at 35% 100%, $primary, transparent),
+    radial-gradient(at 75% 0%, $indigo , transparent);
 }
