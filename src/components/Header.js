@@ -27,7 +27,7 @@ const Header = ({location, title}) => {
   const rootPath = `${__PATH_PREFIX__}/`
   if (location.pathname === rootPath) {
     return (
-      <div className="header">
+      <div className="header homepage">
         <Container>
           <Navbar bg="transparent">
               <Navbar.Brand>
